@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Video Share</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- <div id="users-list"></div> -->
+
+      <div id="join-wrapper">
+        <input id="username" type="text" placeholder="Enter your name..." />
+        <button id="join-btn">Join Stream</button>
+      </div>
+
+      <div id="user-streams"></div>
+
+      <!-- Wrapper for join button -->
+      <div id="footer">
+        <div class="icon-wrapper">
+          <i class="fa fa-camera control-icon" id="camera-btn"></i>
+          <p>Camera</p>
+        </div>
+
+        <div class="icon-wrapper">
+          <i class="fa fa-microphone control-icon" id="mic-btn"></i>
+          <p>Mic</p>
+        </div>
+
+        <div class="icon-wrapper">
+          <i class="fa fa-sign-out control-icon" id="leave-btn"></i>
+          <p>Leave</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

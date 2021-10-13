@@ -1,0 +1,160 @@
+:root {
+  --dark: #2d3142;
+  --less-dark: #4f5d75;
+  --grey: #bfc0c0;
+  --white: #ffffff;
+  --orange: #ef8354;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+#join-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--less-dark);
+  border-radius: 6px;
+  padding: 5rem;
+}
+
+#join-wrapper > *:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+#username {
+  width: 86.5%;
+  padding: 1.2rem 1rem;
+  font-size: 1.4rem;
+  border: 3px solid var(--less-dark);
+  background-color: #bfc0c015;
+  color: var(--white);
+  border-radius: inherit;
+}
+#username:focus {
+  outline: none;
+  border-color: var(--grey);
+}
+
+#join-btn {
+  background-color: var(--orange);
+  border: none;
+  color: #fff;
+  font-size: 1.43em;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+#join-btn:hover {
+  filter: brightness(0.9);
+}
+
+#user-streams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 1em;
+  height: 100%;
+}
+
+.volume-icon {
+  height: 20px;
+  width: 20px;
+  color: var(--grey);
+}
+
+.video-containers {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: var(--less-dark);
+  border: 7px solid var(--orange);
+  border-radius: 5px;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.user-uid {
+  display: flex;
+  color: white;
+  align-items: center;
+  column-gap: 0.3em;
+  background-color: var(--dark);
+  padding: 5px 10px;
+  border-radius: 3px;
+  padding: 0.56rem 1.4rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+  margin: 0;
+  font-size: 18px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+#footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  display: none;
+  justify-content: center;
+  column-gap: 1.4em;
+  width: 100%;
+  height: 100px;
+}
+
+.icon-wrapper {
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.control-icon {
+  display: block;
+  padding: 24px 20px 20px 20px;
+  background-color: var(--less-dark);
+  color: var(--grey);
+  height: 30px;
+  width: 30px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.control-icon:hover {
+  filter: brightness(0.8);
+}
+.control-icon.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+@media screen and (max-width: 1400px) {
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
